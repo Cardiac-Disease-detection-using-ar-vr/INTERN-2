@@ -1,0 +1,32 @@
+{
+    "patient_id": "0X4399118D8F5C539D",
+    "prediction": {
+        "base_score": 0.5571603775024414,
+        "class": 0,
+        "class_label": "Normal",
+        "softmax": [
+            0.5571603775024414,
+            0.22709178924560547,
+            0.21574783325195312
+        ]
+    },
+    "echo": {
+        "predicted_ef": 64.95208740234375,
+        "ground_truth_ef": 68.27357836
+    },
+    "ecg": {
+        "representation": "512-dimensional embedding",
+        "top_embedding_dimension": 497,
+        "importance": 3.963246344240615
+    },
+    "explainability": {
+        "gradcam_ed": "/home/vasanth/projects/cardiac_vr_project/outputs/heatmaps/0X4399118D8F5C539D_ed.png",
+        "gradcam_es": "/home/vasanth/projects/cardiac_vr_project/outputs/heatmaps/0X4399118D8F5C539D_es.png"
+    },
+    "metadata": {
+        "fusion_type": "Late Fusion",
+        "echo_dataset": "EchoNet-Dynamic",
+        "ecg_dataset": "PTB-XL / MIT-BIH",
+        "intern": "Intern 2"
+    }
+}

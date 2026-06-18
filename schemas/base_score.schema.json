@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cardiac Base Score",
+  "type": "object",
+
+  "required": [
+    "patient_id",
+    "prediction",
+    "echo",
+    "ecg",
+    "explainability",
+    "metadata"
+  ],
+
+  "properties": {
+
+    "patient_id": {
+      "type": "string"
+    },
+
+    "prediction": {
+
+      "type": "object",
+
+      "required": [
+        "base_score",
+        "class",
+        "class_label",
+        "softmax"
+      ],
+
+      "properties": {
+
+        "base_score": {
+          "type": "number"
+        },
+
+        "class": {
+          "type": "integer"
+        },
+
+        "class_label": {
+          "type": "string"
+        },
+
+        "softmax": {
+
+          "type": "array",
+
+          "items": {
+            "type": "number"
+          },
+
+          "minItems":3,
+          "maxItems":3
+        }
+
+      }
+
+    },
+
+    "echo": {
+
+      "type":"object",
+
+      "required":[
+        "predicted_ef",
+        "ground_truth_ef"
+      ],
+
+      "properties":{
+
+        "predicted_ef":{
+          "type":"number"
+        },
+
+        "ground_truth_ef":{
+          "type":"number"
+        }
+
+      }
+
+    },
+
+    "ecg":{
+
+      "type":"object",
+
+      "required":[
+        "representation",
+        "top_embedding_dimension",
+        "importance"
+      ],
+
+      "properties":{
+
+        "representation":{
+          "type":"string"
+        },
+
+        "top_embedding_dimension":{
+          "type":"integer"
+        },
+
+        "importance":{
+          "type":"number"
+        }
+
+      }
+
+    },
+
+    "explainability":{
+
+      "type":"object",
+
+      "required":[
+        "gradcam_ed",
+        "gradcam_es"
+      ],
+
+      "properties":{
+
+        "gradcam_ed":{
+          "type":"string"
+        },
+
+        "gradcam_es":{
+          "type":"string"
+        }
+
+      }
+
+    },
+
+    "metadata":{
+
+      "type":"object",
+
+      "required":[
+        "fusion_type",
+        "echo_dataset",
+        "ecg_dataset",
+        "intern"
+      ],
+
+      "properties":{
+
+        "fusion_type":{
+          "type":"string"
+        },
+
+        "echo_dataset":{
+          "type":"string"
+        },
+
+        "ecg_dataset":{
+          "type":"string"
+        },
+
+        "intern":{
+          "type":"string"
+        }
+
+      }
+
+    }
+
+  }
+
+}
