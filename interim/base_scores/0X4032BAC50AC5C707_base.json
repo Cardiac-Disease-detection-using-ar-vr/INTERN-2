@@ -16,8 +16,8 @@
     },
     "ecg": {
         "representation": "512-dimensional embedding",
-        "top_embedding_dimension": 497,
-        "importance": 3.963246344240615
+        "top_embedding_dimension": 202,
+        "importance": 0.03193804368604712
     },
     "explainability": {
         "gradcam_ed": "/home/vasanth/projects/cardiac_vr_project/outputs/heatmaps/0X4032BAC50AC5C707_ed.png",
